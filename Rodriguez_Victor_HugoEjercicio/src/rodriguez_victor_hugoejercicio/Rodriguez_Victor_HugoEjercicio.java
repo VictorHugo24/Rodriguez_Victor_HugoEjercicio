@@ -31,11 +31,11 @@ public class Rodriguez_Victor_HugoEjercicio {
             dias = scanner.nextInt();
         
         System.out.print("Favor ingrese su salario: ");
-            salario = scanner.nextInt();
+            salario = scanner.nextDouble();
         
        salarioHora = salario/dias;
         
-       salarioSemana = (salario*salarioHora)/4;
+       salarioSemana = salario/4;
        
        System.out.println("****BOLETA DE EMPLEADO****");
        System.out.print("Nombre del empleado: "+nombre+
