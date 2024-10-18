@@ -19,7 +19,7 @@ public class Rodriguez_Victor_HugoCuotas {
         Scanner scanner = new Scanner(System.in);
         
         int precioTotal;
-        double cuotas, totalCuotas;
+        double cuotas, totalCuotas, tasaInteres, comisionCuotas, seguroMensual;
         
         System.out.print("Favor ingrese el precio del producto: ");
             precioTotal = scanner.nextInt();
@@ -27,10 +27,24 @@ public class Rodriguez_Victor_HugoCuotas {
         System.out.print("Favor ingrese la cantidad de cuotas que desea: ");
              cuotas = scanner.nextInt();
         
+        System.out.print("Ingresar la tasa de interes: ");
+             tasaInteres = scanner.nextDouble()/100;
+        
+        System.out.print("Ingrese la comision por cuota: ");
+             comisionCuotas = scanner.nextDouble()/100;
+             
+        System.out.print("Ingrese el porcentaje del seguro mensual: ");
+             seguroMensual = scanner.nextDouble()/100;  
+             
+        
         totalCuotas = precioTotal/cuotas;
+        double intereses = (cuotas*tasaInteres);
+        double comision = (cuotas*comisionCuotas);
+        double seguro = (cuotas*seguroMensual);
+        double totalPagar = totalCuotas + intereses + comision + seguro;
         
         System.out.println("****Coutoas Mensuales****");
-        System.out.print("Cuotas de pago mensual: HNL "+totalCuotas+
+        System.out.print("Cuotas de pago mensual: HNL "+totalPagar+
                          "\nTotal a pagar: HNL "+precioTotal+"\n");
         
     }
